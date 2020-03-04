@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>post page</title>
+</head>
+<body>
+    <form action="/search-post" method="post">
+        <!-- {% csrf_token %}的标签是Django提供的防止伪装提交请求的功能。POST 方法提交的表格，必须有此标签。-->
+        {% csrf_token %}
+        <input type="text" name="q">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>{{ rlt }}</p>
+</body>
+</html>
